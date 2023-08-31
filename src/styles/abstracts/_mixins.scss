@@ -1,0 +1,19 @@
+@mixin textTruncate ($lineClamp: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lineClamp;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    @include laptop {
+        display: block;
+    }
+}
+
+@mixin typograghy ($font-size: 1rem) {
+    font-family: ('Roboto', sans-serif);
+    color: $textColor;
+    font-size: $font-size;
+    line-height: 1.1rem;
+    @include laptop {
+        line-height: 1.25rem;
+    }
+}

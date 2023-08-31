@@ -1,0 +1,36 @@
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1400px;
+
+@mixin phone {
+    @media (min-width: #{$break-sm}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$break-md}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: #{$break-lg })  {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$break-xl }) {
+        @content;
+    }
+}
+
+@mixin xl-desktop {
+    @media (min-width: #{$break-xxl }) {
+        @content;
+    }
+}
+

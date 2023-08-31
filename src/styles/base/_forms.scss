@@ -1,0 +1,63 @@
+.custom-check input,
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.custom-check input:checked ~ .checkmark,
+.custom-radio input:checked ~ .checkmark {
+    background-color: $vencaColor;
+    border-color: $vencaColor;
+}
+.custom-radio input:checked ~ .checkmark {
+    background-color: #fff;
+}
+.custom-check input:checked ~ .checkmark:after,
+.custom-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid $textColor;
+    border-radius: 3px;
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+.custom-check {
+    .checkmark:after {
+        left: 40%;
+        top: 15%;
+        width: .375rem;
+        height: .75rem;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+} 
+.custom-radio {
+    .checkmark {
+        border-radius: 50%;
+        &:after {
+            top: 14%;
+            left: 15%;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: $vencaColor;
+        }
+    }
+} 
+::-webkit-input-placeholder {
+    font-size: .8rem;
+    font-weight: 300;
+    color: #717171;
+}

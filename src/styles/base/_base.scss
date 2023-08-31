@@ -1,0 +1,65 @@
+/* === GENERICS TAGS === */
+body {
+@include typograghy;
+}
+
+a {
+    @include typograghy;
+    &:hover {
+        color: $textColor;
+    }
+    &:active {
+        color: $textColor;
+    }
+    &:visited {
+        color: $textColor;
+    }
+}
+
+.container {
+    @include xl-desktop {
+        max-width: 1170px;
+    }
+}
+
+// Colors
+.venca-color {
+    color: $vencaColor;
+}
+
+// Buttons
+.button-vc {
+    @extend %button-venca;
+}
+.button-vc-light {
+    @extend %button-venca;
+    border-width: 0.5px;
+    border-color: #717171;
+}
+
+// Backgrounds
+.bg-light-vc {
+    background-color: $greyLightColor;
+}
+
+// Positions
+.position-lg-static {
+    @include laptop {
+        position: static!important;
+    }
+}
+
+// Text
+.text-justify {
+    text-align: justify;
+}
+.text-color {
+    color: $textColor !important;
+}
+.lh-lg {
+    @include laptop {
+        line-height: 1!important;
+    }
+}
+
+

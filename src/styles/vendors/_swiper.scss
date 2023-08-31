@@ -1,0 +1,17 @@
+#carouselLookBook,
+#products {
+    .swiper-button-next, 
+    .swiper-button-prev {    
+        &:after {
+            font-size: 1rem;
+            @include laptop {
+                font-size: 1.25rem;
+            }
+            font-weight: bold;
+            color: #000;
+        } 
+    }
+}
+
+
+

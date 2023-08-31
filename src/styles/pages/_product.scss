@@ -1,0 +1,79 @@
+/* === TITLE & DESCRIPTION === */
+#titleAndDescription {
+    .fs-6 {
+        @include laptop {
+            font-size: 1.8rem!important;
+        }
+    }
+    .line-clamp {
+        @include textTruncate;
+    }
+}
+
+/* === SWIPER PILLS === */
+#prodList {
+    .swiperColorPills {  
+        max-width: 85%;
+        margin: 0;
+        .swiper-wrapper { 
+            .colorpicker {
+                img {
+                    border-radius: 50%;
+                    max-width: 2rem;
+                }   
+                &.active {
+                    img {
+                        border: 2px solid #000;
+                        padding: 2px;
+                    }
+                }
+            }   
+        }
+    }  
+}
+
+/* === FILTERS === */
+#filters {
+    label { 
+        &.pill-rounded {
+            width: 2.75rem;
+            height: 2.75rem;
+        }    
+        &.active {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    #colorFilter {
+        .pill-rounded {
+            width: 2.75rem;
+            height: 2.75rem;
+            @include laptop {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            &.active {
+                border: solid 3px $textColor!important;
+            }
+            label {
+                width: 2.25rem;
+                height: 2.25rem;
+                @include laptop {
+                    width: 2rem;
+                    height: 2rem;
+                } 
+                &[title="BLANCO"] {
+                    border: solid 2px $textColor;
+                }            
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
