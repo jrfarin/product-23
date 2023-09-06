@@ -1,3 +1,86 @@
+
+
+
+
+/* === ASPECT RATIO === */
+.aspect {
+    height: 0;
+    padding-top: 100%; 
+    > :first-child {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &.ratio-80-107 {
+        padding-top: 133.84%;
+    }
+}
+
+/* === ZOOM === */
+.zoomBox {
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1100;
+    width:100vw;
+    height:100vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* === SWIPER  === */
+.swiper-pagination-bullet-active {
+    background: $textColor!important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    color: $textColor
+}
+.swiperZoom img {
+   max-height: 97vh;
+}
+
+
+
+#imgThumbs .img-fluid {
+    &.thumbnail {
+        opacity: 0.5;
+    }
+    &.active {
+        opacity: 1;
+    }
+    @include tablet {
+        max-width: 70px;
+    }
+    @include laptop {
+        max-width: 84px;
+    }
+    @include desktop {
+        max-width: 96px;
+    }
+}
+.tagsBox {
+    @include tablet {
+        bottom: 16%!important;
+    }
+    @include laptop {
+        bottom: 4%!important;
+        left: 17%;
+    }
+}
+
+
+
+
+
+
+
+
+
 /* === TITLE & DESCRIPTION === */
 #titleAndDescription {
     .fs-6 {

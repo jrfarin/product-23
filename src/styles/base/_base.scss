@@ -48,6 +48,9 @@ a {
         position: static!important;
     }
 }
+.z-index {
+    z-index: $z-index-vc;
+}
 
 // Text
 .text-justify {

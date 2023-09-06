@@ -23,15 +23,58 @@ export const wishlistIcon = () => {
     };
 }
 
-// Toggle Class Active
-export const toggleActiveClass = (e) => {
-    const pillLabel = document.querySelectorAll('.pill-rounded');
-    
-    pillLabel.forEach(function(pill) {
-        pill.addEventListener('click', pillActive);       
+// ZOOM MOBILE
+export const srcSliderActive = () => {
+    const sliderImages = document.querySelectorAll('.swiperProduct img');
+
+    sliderImages.forEach(function(source) {
+        source.addEventListener('click', triggerZoom);
     });
 
-    function pillActive() {
-        this.classList.toggle('active')
-    }  
+    function triggerZoom() {
+        const imageSource = this.src;
+        //console.log(imageSource);
+        
+        const image = document.createElement('IMG');
+        image.src = imageSource;
+
+        const zoomContainer = document.createElement('DIV');
+        zoomContainer.classList.add('zoomBox');
+        zoomContainer.appendChild(image);;
+
+        const mainContainer = document.querySelector('main');
+        mainContainer.appendChild(zoomContainer); 
+        
+        const zoomBox = document.querySelector('.zoomBox');
+        zoomBox.addEventListener('click', ()=> {
+            zoomBox.remove();
+        })
+    }
+}
+
+// SLIDESHOW DESKTOP
+export const slideshowDk = () => {
+    const srcThumbs = document.querySelectorAll('#imgThumbs img')
+
+    srcThumbs.forEach((thumb) => {
+        thumb.addEventListener('click', showSlideshowDesktop);
+    });
+
+    function showSlideshowDesktop() {
+ 
+        const thumbSource = this.src;
+        const mainImage = document.querySelector('#mainImage img');
+        const regex = /xs./i
+        const srcMainImg = thumbSource.replace(regex, 'xl.');
+        mainImage.src = srcMainImg;
+
+       
+        let thumbnails = document.getElementsByClassName('thumbnail');
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].className = thumbnails[i].className.replace(' active', '');
+            this.classList.add('active');
+        }
+
+    }
+
 }
