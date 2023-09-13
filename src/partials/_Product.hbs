@@ -1,9 +1,9 @@
-<div class="col-12 col-md-8">
+<div class="col-12 col-md-7 col-lg-8">
     <section id="productSlider" class="row position-relative">
         
         <!-- Carousel Mobile -->
         <div id="carouselSlider" class="col d-md-none">
-            <div class="swiper swiperProduct ">
+            <div class="swiper swiperProduct " style="z-index:0;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <picture>
@@ -194,8 +194,18 @@
     </section>
 </div>
 
-<div class="col-12 col-md-4">
+<!-- ASIDE -->
+<div class="col-12 col-md-5 col-lg-4">
     
+    <!-- BREADCRUMBS -->
+    <section id="breadcrumbs" class="row mb-3">
+        {{> _Breadcrumbs }}
+    </section>
+
+    <!-- CHOOSE FEATURES -->
+    <section id="chooseFeatures" class="row mb-3">
+        {{> _ChooseFeatures }}
+    </section>
 </div>
 
 

@@ -1,0 +1,126 @@
+<!-- ASIDE -->
+<div id="asideZone" class="d-flex flex-column flex-md-column-reverse">
+    
+    <!-- Reviews & price -->
+    <div class="col-12 mt-1">
+        <div class="row justify-content-between flex-md-row-reverse">
+            
+            <!-- Reviews -->
+            <div class="col-6 d-md-flex justify-content-md-end">       
+                <a id="productRating" href="#headingReview" class="d-flex align-items-center text-decoration-none mb-2" data-target="#collapseReview" data-toggle="collapse">
+                    <div class="product-rating d-flex">
+                        <img src="https://m.venca.es/Content/images/Icons/Product/star.svg" width="16" height="16" class="img-fluid">
+                        <img src="https://m.venca.es/Content/images/Icons/Product/star.svg" width="16" height="16" class="img-fluid">
+                        <img src="https://m.venca.es/Content/images/Icons/Product/star.svg" width="16" height="16" class="img-fluid">
+                        <img src="https://m.venca.es/Content/images/Icons/Product/star.svg" width="16" height="16" class="img-fluid">
+                        <img src="https://m.venca.es/Content/images/Icons/Product/star-o.svg" width="16" height="16" class="img-fluid">
+                    </div>
+                    <div class="number-ratings">
+                        <span class="fs-075-rem opacity-50 ps-2">(49)</span>  
+                    </div>
+                </a>
+                <!-- BRAND -->
+                <div id="brandBox" class="mb-3 d-md-none">
+                    <span class="tradebrand fs-085-rem text-decoration-underline notranslate" data-toggle="modal" data-target="#myModalWait">Venca</span>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div id="priceBox" class="col-6 pt-1">
+                <div class="row flex-column justify-content-between flex-md-row-reverse">
+                    <div id="previousPriceText" class="col-12 col-md-7 col-lg-6 ps-md-2 ps-lg-0 mb-1">
+                        <span class="d-flex justify-content-end d-md-inline-block fs-085-rem smallPrice"><s>12,99€</s></span>
+                    </div>
+                    <div id="productprice" class="col-12 col-md-5 col-lg-6 d-flex justify-content-end d-md-inline-block priceColor discount pe-md-0" data-uitest="productPrice">
+                        <span class="fs-06-rem fw-light d-md-none pe-2">desde</span>
+                        <span id="integerPricePart" class="fs-1125-rem fw-bold mediumPrice notranslate">7</span>
+                        <span id="integerPricePart" class="fs-1125-rem fw-bold mediumPrice notranslate">,</span>
+                        <span id="decimalPricePart" class="fs-1125-rem fw-bold mediumPrice notranslate">99€</span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Title -->
+    <div class="col-12 mb-3">
+        <div id="title" class="col-12">
+            <h1 class="fs-085-rem fw-bold title mb-0">Camiseta lisa finos tirantes espagueti</h1>
+        </div>
+    </div>
+</div>
+
+<div id="messagesPDP" class="row mb-3 mb-md-0">
+    
+    <!-- Commercial Message -->
+    <div class="col-12 d-flex mb-2">
+        <span id="reinforcementTextCommercialBanner" class="fs-085-rem text-center text-md-start venca-color mt-md-3 notranslate">HAPPY DAY! -30% EXTRA en tu favorito + 20% EXTRA en el resto. CÓDIGO: 30Y20</span>
+    </div>
+
+    <!-- Sequra Message -->
+    <div class="col-12 d-flex justify-content-center justify-content-md-start align-items-center mb-2" data-type="i1" data-amount="599" data-product="i1" style="font-family: Oxygen, sans-serif;">
+        <span class="fs-085-rem pe-1">Compra ahora, paga en 7 días </span>
+        <img src="./static/img/logoSequra.png" class="" width="60" height="13">
+    </div>
+</div>
+
+
+<!-- Sizes & Color -->
+<div class="fixed-bottom position-md-static px-3">
+    <div class="row flex-md-column bg-white py-2">
+        
+        <!-- Sizes -->
+        <div class="col-6 col-md-12 order-md-2">
+            <button type="button" class="d-flex justify-content-between align-items-center w-100 btn border" data-bs-toggle="collapse" data-bs-target="#collapseChooseSize" aria-expanded="false" aria-controls="collapseChooseSize">
+                <span class="fs-085-rem">Talla</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#3c3c3b" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <div class="collapse" id="collapseChooseSize">
+                <div id="productSize" class="card border-top-0">
+                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center pt-4 d-md-none">
+                        <p class="text-uppercase fs-5 fw-light mb-0" id="">Selecciona Talla</p>
+                        <button id="btnCloseSize" type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                    </div>
+                    <div class="card-body vh-100 overflow-auto">
+                        {{> _ChooseSize }}                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Color MB -->
+        <div class="col-6 d-block d-md-none">
+            <button type="button" class="d-flex justify-content-between align-items-center w-100 btn border" data-bs-toggle="modal" data-bs-target="#modalChooseColor">
+                <section class="pill-color">
+                    <img src="../static/img/blue.webp" class="rounded-circle" alt="" width="16" height="16">
+                    <span class="fs-085-rem ps-2">Color</span>
+                </section>             
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#3c3c3b" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Color DK -->
+        <div class="col-12 d-none d-md-block order-md-1 mb-md-3">
+            {{> _ChooseColor }}
+        </div>
+        
+        <!-- Add Button -->
+        <div class="col-12 order-md-3 mt-2 mt-md-3">
+            <button type="button" class="d-flex justify-content-center align-items-center w-100 btn btn-dark">
+                <span class="fs-5 fw-normal text-uppercase">Añadir a la cesta</span>            
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade ps-0" id="modalChooseColor" tabindex="-1" aria-labelledby="modalChooseColorLabel" aria-hidden="true" style="z-index:2000;">
+    {{> _ModalColor }}
+</div>
+
+
+

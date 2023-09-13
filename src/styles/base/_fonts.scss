@@ -3,17 +3,21 @@
     src: url('../fonts/Roboto-Regular.woff2');
 }
 
+
 .fs-06-rem {
-    font-size: .6rem;
+    font-size: $font-size-base * .6;
 }
 .fs-07-rem {
-    font-size: .7rem;
+    font-size: $font-size-base * .7;
 }
 .fs-075-rem {
-    font-size: .75rem;
+    font-size: $font-size-base * .75;
 }
 .fs-085-rem {
-    font-size: .875rem;
+    font-size: $font-size-base * .875;
+}
+.fs-1125-rem {
+    font-size: $font-size-base * 1.125;
 }
 
 

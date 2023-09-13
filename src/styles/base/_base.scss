@@ -43,14 +43,14 @@ a {
 }
 
 // Positions
-.position-lg-static {
-    @include laptop {
+.position-md-static {
+    @include tablet {
         position: static!important;
     }
 }
-.z-index {
-    z-index: $z-index-vc;
-}
+// .z-index {
+//     z-index: $z-index-vc;
+// }
 
 // Text
 .text-justify {
@@ -59,10 +59,21 @@ a {
 .text-color {
     color: $textColor !important;
 }
+.priceColor {
+    color: $priceColor;
+}
 .lh-lg {
     @include laptop {
         line-height: 1!important;
     }
 }
+
+// More...
+.disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
 
 

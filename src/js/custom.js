@@ -52,7 +52,7 @@ export const srcSliderActive = () => {
     }
 }
 
-// SLIDESHOW DESKTOP
+// GALLERY DESKTOP
 export const slideshowDk = () => {
     const srcThumbs = document.querySelectorAll('#imgThumbs img')
 
@@ -61,20 +61,27 @@ export const slideshowDk = () => {
     });
 
     function showSlideshowDesktop() {
- 
+
         const thumbSource = this.src;
         const mainImage = document.querySelector('#mainImage img');
         const regex = /xs./i
         const srcMainImg = thumbSource.replace(regex, 'xl.');
         mainImage.src = srcMainImg;
 
-       
         let thumbnails = document.getElementsByClassName('thumbnail');
         for (let i = 0; i < thumbnails.length; i++) {
             thumbnails[i].className = thumbnails[i].className.replace(' active', '');
             this.classList.add('active');
         }
-
     }
+}
 
+// CLOSE SIZE PANEL
+export const closeSizePanel = () => {
+    const sizePanel = document.getElementById('collapseChooseSize');
+    const btnCloseSize = document.getElementById("btnCloseSize");
+
+    btnCloseSize.addEventListener('click', () => {
+        sizePanel.classList.remove('show');
+    })
 }

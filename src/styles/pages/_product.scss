@@ -1,3 +1,163 @@
+body.product {
+    main {
+        margin: 0 .5rem;
+    }
+}
+
+#pdp {
+    #imgThumbs .img-fluid {
+        &.thumbnail {
+            opacity: 0.5;
+        }
+        &.active {
+            opacity: 1;
+        }
+        @include tablet {
+            max-width: 62px;
+        }
+        @include laptop {
+            max-width: 84px;
+        }
+        @include desktop {
+            max-width: 96px;
+        }
+    }
+    .tagsBox {
+        @include tablet {
+            bottom: 18%!important;
+        }
+        @include laptop {
+            bottom: 4%!important;
+            left: 17%;
+        }
+    }
+    #integerPricePart {
+        @include tablet {
+            margin-right: -5px;
+        }
+        @include laptop {
+            font-size: $font-size-base * 1.5
+        }
+        @include desktop {
+            font-size: $font-size-base * 1.75
+        }
+    }
+    #decimalPricePart {
+        @include laptop {
+            font-size: $font-size-base * 1.5
+        }
+        @include desktop {
+            font-size: $font-size-base * 1.75
+        }
+    }
+    .title {
+        &.fs-085-rem {
+            @include laptop {
+                font-size: $font-size-base * 1.25;
+            }
+        }
+    }
+    #productColor {
+        .btn-group {
+            display: block;
+            @include tablet {
+                display: inline-flex;
+            }
+            .colorRow {
+                @include tablet {
+                    border-bottom: none!important;
+                }
+            }
+        }
+        .colorPicker {
+            picture {
+                width: 36px;
+                height: 36px;
+                img {  
+                    &.active {  
+                        border: 3px solid $textColor;           
+                    }
+                    &[alt="blanco"] {
+                        border: 1px solid #ccc;
+                    } 
+                }    
+            }
+        }   
+    }
+    #collapseChooseSize {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        @include tablet {
+            position: static;
+            width: auto;
+        }
+        #productSize {
+            .card-body {
+                @include tablet {
+                    max-height: 220px;
+                }
+                @include desktop {
+                    max-height: 424px;
+                }
+                li {
+                    &:first-child {
+                        @include tablet {
+                            padding: 0 .5rem .5rem!important;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+/* === ZOOM === */
+.zoomBox {
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1100;
+    width:100vw;
+    height:100vh;
+    // overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* === SCROLL === */
+::-webkit-scrollbar {
+    -webkit-appearance: none !important
+}
+
+::-webkit-scrollbar:vertical {
+    width: 10px !important
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 4px !important
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2) !important;
+    border-radius: 8px !important;
+    border: 2px solid #fff !important
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px !important;
+    background-color: #fff !important
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -18,20 +178,6 @@
     }
 }
 
-/* === ZOOM === */
-.zoomBox {
-    position: fixed;
-    top: 0;
-    left:0;
-    z-index: 1100;
-    width:100vw;
-    height:100vh;
-    overflow: scroll;
-    display: flex;
-    justify-content: center;
-}
-
-
 /* === SWIPER  === */
 .swiper-pagination-bullet-active {
     background: $textColor!important;
@@ -41,117 +187,10 @@
     color: $textColor
 }
 .swiperZoom img {
-   max-height: 97vh;
+    max-height: 97vh;
 }
 
 
-
-#imgThumbs .img-fluid {
-    &.thumbnail {
-        opacity: 0.5;
-    }
-    &.active {
-        opacity: 1;
-    }
-    @include tablet {
-        max-width: 70px;
-    }
-    @include laptop {
-        max-width: 84px;
-    }
-    @include desktop {
-        max-width: 96px;
-    }
-}
-.tagsBox {
-    @include tablet {
-        bottom: 16%!important;
-    }
-    @include laptop {
-        bottom: 4%!important;
-        left: 17%;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* === TITLE & DESCRIPTION === */
-#titleAndDescription {
-    .fs-6 {
-        @include laptop {
-            font-size: 1.8rem!important;
-        }
-    }
-    .line-clamp {
-        @include textTruncate;
-    }
-}
-
-/* === SWIPER PILLS === */
-#prodList {
-    .swiperColorPills {  
-        max-width: 85%;
-        margin: 0;
-        .swiper-wrapper { 
-            .colorpicker {
-                img {
-                    border-radius: 50%;
-                    max-width: 2rem;
-                }   
-                &.active {
-                    img {
-                        border: 2px solid #000;
-                        padding: 2px;
-                    }
-                }
-            }   
-        }
-    }  
-}
-
-/* === FILTERS === */
-#filters {
-    label { 
-        &.pill-rounded {
-            width: 2.75rem;
-            height: 2.75rem;
-        }    
-        &.active {
-            background-color: #000;
-            color: #fff;
-        }
-    }
-    #colorFilter {
-        .pill-rounded {
-            width: 2.75rem;
-            height: 2.75rem;
-            @include laptop {
-                width: 2.6rem;
-                height: 2.6rem;
-            }
-            &.active {
-                border: solid 3px $textColor!important;
-            }
-            label {
-                width: 2.25rem;
-                height: 2.25rem;
-                @include laptop {
-                    width: 2rem;
-                    height: 2rem;
-                } 
-                &[title="BLANCO"] {
-                    border: solid 2px $textColor;
-                }            
-            }
-        }
-    }
-}
 
 
 
