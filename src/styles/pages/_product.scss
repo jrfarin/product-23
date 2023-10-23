@@ -57,33 +57,7 @@ body.product {
             }
         }
     }
-    #productColor {
-        .btn-group {
-            display: block;
-            @include tablet {
-                display: inline-flex;
-            }
-            .colorRow {
-                @include tablet {
-                    border-bottom: none!important;
-                }
-            }
-        }
-        .colorPicker {
-            picture {
-                width: 36px;
-                height: 36px;
-                img {  
-                    &.active {  
-                        border: 3px solid $textColor;           
-                    }
-                    &[alt="blanco"] {
-                        border: 1px solid #ccc;
-                    } 
-                }    
-            }
-        }   
-    }
+
     #collapseChooseSize {
         position: fixed;
         top: 0;
@@ -96,7 +70,7 @@ body.product {
         #productSize {
             .card-body {
                 @include tablet {
-                    max-height: 220px;
+                    max-height: 230px;
                 }
                 @include desktop {
                     max-height: 424px;
@@ -110,7 +84,56 @@ body.product {
                 }
             }
         }
-    }  
+    }
+    #collapseChooseColor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        @include tablet {
+            position: static;
+            width: auto;
+        }
+        &:not(.show) {
+            // display: none;
+            @include tablet {
+                display: block;
+            } 
+        }
+        #productColor {
+            .card-body {
+                @include tablet {
+                    height: auto!important;
+                }
+                .btn-group {
+                    display: block;
+                    @include tablet {
+                        display: inline-flex;
+                    }
+                    .colorRow {
+                        @include tablet {
+                            border-bottom: none!important;
+                        }
+                    }
+                }
+                .colorPicker {
+                    picture {
+                        width: 36px;
+                        height: 36px;
+                        img {  
+                            &.active {  
+                                border: 3px solid $textColor;           
+                            }
+                            &[alt="blanco"] {
+                                border: 1px solid #ccc;
+                            } 
+                        }    
+                    }
+                }             
+            }
+            
+        }
+    }
 }
 
 /* === ZOOM === */

@@ -76,12 +76,18 @@ export const slideshowDk = () => {
     }
 }
 
-// CLOSE SIZE PANEL
-export const closeSizePanel = () => {
-    const sizePanel = document.getElementById('collapseChooseSize');
-    const btnCloseSize = document.getElementById("btnCloseSize");
+// CLOSE PANELS
+export const closePanels = () => {
+    const btnClosePanel = document.querySelectorAll('#pdp .btn-close');
 
-    btnCloseSize.addEventListener('click', () => {
-        sizePanel.classList.remove('show');
+    btnClosePanel.forEach((btn) => {
+        btn.addEventListener("click", hidePanel);
     })
+
+    function hidePanel() {
+        const panels = document.querySelectorAll(".collapse");
+        panels.forEach((panel) => {
+            panel.classList.remove('show');
+        })
+    }
 }

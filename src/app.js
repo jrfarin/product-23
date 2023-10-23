@@ -15,12 +15,12 @@ import './static/img/white.webp';
 
 
 import { swiperProduct, swiperZoom } from './js/sliders';
-import { wishlistIcon, srcSliderActive, slideshowDk, closeSizePanel } from './js/custom';
+import { wishlistIcon, srcSliderActive, slideshowDk, closePanels } from './js/custom';
 
 wishlistIcon();
 srcSliderActive();
 slideshowDk();
-closeSizePanel();
+closePanels();
 
 
 

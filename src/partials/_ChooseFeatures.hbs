@@ -90,24 +90,30 @@
             </div>
         </div>
         
-        <!-- Color MB -->
-        <div class="col-6 d-block d-md-none">
-            <button type="button" class="d-flex justify-content-between align-items-center w-100 btn border" data-bs-toggle="modal" data-bs-target="#modalChooseColor">
+        <!-- Color -->
+        <div class="col-6 col-md-12 order-md-1">
+            <button type="button" class="d-flex d-md-none justify-content-between align-items-center w-100 btn border" data-bs-toggle="collapse" data-bs-target="#collapseChooseColor" aria-expanded="false" aria-controls="collapseChooseColor">
                 <section class="pill-color">
                     <img src="../static/img/blue.webp" class="rounded-circle" alt="" width="16" height="16">
                     <span class="fs-085-rem ps-2">Color</span>
-                </section>             
+                </section>   
                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="#3c3c3b" class="bi bi-chevron-down" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                 </svg>
             </button>
+            <div class="collapse" id="collapseChooseColor">
+                <div id="productColor" class="card border-0">
+                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center pt-4 d-md-none">
+                        <p class="text-uppercase fs-5 fw-light mb-0" id="">Selecciona Color</p>
+                        <button id="btnCloseColor" type="button" class="btn-close opacity-75" aria-label="Close"></button>
+                    </div>
+                    <div class="card-body vh-100 overflow-auto p-md-0">
+                        {{> _ChooseColor }}
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Color DK -->
-        <div class="col-12 d-none d-md-block order-md-1 mb-md-3">
-            {{> _ChooseColor }}
-        </div>
-        
         <!-- Add Button -->
         <div class="col-12 order-md-3 mt-2 mt-md-3">
             <button type="button" class="d-flex justify-content-center align-items-center w-100 btn btn-dark">
@@ -118,9 +124,6 @@
 </div>
 
 
-<div class="modal fade ps-0" id="modalChooseColor" tabindex="-1" aria-labelledby="modalChooseColorLabel" aria-hidden="true" style="z-index:2000;">
-    {{> _ModalColor }}
-</div>
 
 
 
