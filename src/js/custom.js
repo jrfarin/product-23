@@ -91,3 +91,34 @@ export const closePanels = () => {
         })
     }
 }
+
+// TOOGLE PANELS 
+export const togglePanels = () => {
+    const readMorePdp = document.querySelectorAll('.readMorePdp');
+    const seeReviews = document.querySelector('.seeMoreReviews');
+    const seeSizeReviews = document.querySelector('.seeSizeReviews');
+
+    readMorePdp.forEach((link) => {
+        link.addEventListener('click', openPanels);
+    })
+
+    function openPanels() {
+        const panelsPdp = this.parentElement.children[0];
+        panelsPdp.classList.toggle('d-block');
+        
+        if(this.previousElementSibling.children[1].classList.contains('seeMoreReviews')) {
+            seeReviews.classList.toggle('h-reviews');
+        } 
+        if(this.previousElementSibling.children[1].classList.contains('seeSizeReviews')) {
+            seeSizeReviews.classList.toggle('h-reviews')
+        } 
+        
+        const panelSpan = this.children[0];
+        
+        if(!panelsPdp.classList.contains('d-block')) {
+            panelSpan.textContent = 'ver más'
+        } else {
+            panelSpan.textContent = 'ver menos'
+        }
+    } 
+}

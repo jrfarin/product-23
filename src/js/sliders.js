@@ -23,3 +23,25 @@ export const swiperZoom = new Swiper(".swiperZoom", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+export const swiperLastSeen = new Swiper('.swiperLastSeen', {
+    slidesPerView: 2.5,
+    spaceBetween: 15,
+    modules: [Navigation],
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {       
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+    }
+});

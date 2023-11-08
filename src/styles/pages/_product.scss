@@ -1,8 +1,8 @@
-body.product {
-    main {
-        margin: 0 .5rem;
-    }
-}
+// body.product {
+//     main {
+//         margin: 0 .5rem;
+//     }
+// }
 
 #pdp {
     #imgThumbs .img-fluid {
@@ -22,15 +22,18 @@ body.product {
             max-width: 96px;
         }
     }
-    .tagsBox {
-        @include tablet {
-            bottom: 18%!important;
-        }
-        @include laptop {
-            bottom: 4%!important;
-            left: 17%;
+    #productSlider {
+        .tagsBox {
+            @include tablet {
+                bottom: 18%!important;
+            }
+            @include laptop {
+                bottom: 4%!important;
+                left: 17%;
+            }
         }
     }
+    
     #integerPricePart {
         @include tablet {
             margin-right: -5px;
@@ -134,6 +137,65 @@ body.product {
             
         }
     }
+    #lastSeen {
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 2.25rem;
+            height: 2.25rem;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.32);
+        }
+        .swiper-button-prev {
+            left: -45px;
+        }
+        .swiper-button-next {
+            right: -45px;
+        }
+        .swiper-button-prev:after, 
+        .swiper-button-next:after  {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #aa0061;
+        }
+        .swiper-button-prev.swiper-button-disabled:after, 
+        .swiper-button-next.swiper-button-disabled:after  {
+            color: #000;
+        }  
+    }   
+    .panelsPdp {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        &.careInstructions {
+            -webkit-line-clamp: 1;
+        }
+        .box-bar {
+            span {
+                &:first-child {
+                    width: 5rem;
+                }
+                &:last-child {
+                    width: 2rem;
+                }
+            }
+            .progress {
+                width: 80%;
+                background-color: #feefef;
+                .progress-bar {
+                    background-color: #DF99C0;
+                }
+            }
+
+        }
+        .seeMoreReviews,
+        .seeSizeReviews{
+            height: 0;
+            &.h-reviews {
+                height: auto;
+                margin-top: 1rem;
+            }
+        }
+    } 
 }
 
 /* === ZOOM === */
@@ -153,15 +215,12 @@ body.product {
 ::-webkit-scrollbar {
     -webkit-appearance: none !important
 }
-
 ::-webkit-scrollbar:vertical {
     width: 10px !important
 }
-
 ::-webkit-scrollbar:horizontal {
     height: 4px !important
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: rgba(0,0,0,.2) !important;
     border-radius: 8px !important;
