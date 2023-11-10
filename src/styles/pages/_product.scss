@@ -166,8 +166,12 @@
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        @include laptop {
+            -webkit-line-clamp: 3;
+        }
         &.careInstructions {
             -webkit-line-clamp: 1;
+            
         }
         .box-bar {
             span {
@@ -272,7 +276,9 @@
     max-height: 97vh;
 }
 
-
+.cPointer {
+    cursor: pointer;
+}
 
 
 

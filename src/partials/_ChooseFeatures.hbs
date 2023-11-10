@@ -58,18 +58,30 @@
     </div>
 
     <!-- Sequra Message -->
-    <div class="col-12 d-flex justify-content-center justify-content-md-start align-items-center" data-type="i1" data-amount="599" data-product="i1" style="font-family: Oxygen, sans-serif;">
+    <div class="col-12 d-flex justify-content-center justify-content-md-start align-items-center mb-2" data-type="i1" data-amount="599" data-product="i1" style="font-family: Oxygen, sans-serif;">
         <span class="fs-085-rem pe-1">Compra ahora, paga en 7 días </span>
         <img src="./static/img/logoSequra.png" class="" width="60" height="13">
+    </div>
+
+    <!-- Warnings & Sellers Reviews Up -->
+    <div class="col-12 fs-085-rem text-center d-block d-md-none">
+        <div id="warningsPDP">
+            <p class="mb-0">¿Necesitas ayuda? <b>91 918 50 48</b></p>
+            <p class="mb-2">laborables de 9 a 21h - sábados de 9 a 14h</p>    
+        </div>
+        <div id="sellersReviews">
+            <a href="" class="d-block fw-bold text-decoration-none cPointer">Vendido por <span class="notranslate">Shoppins</span></a>
+            <small>Este artículo no admite descuentos adicionales</small>
+        </div>
     </div>
 </div>
 
 
 <!-- Sizes & Color -->
 <div class="fixed-bottom position-md-static px-3">
-    <div class="row flex-md-column bg-white py-2">
+    <div class="row flex-md-column bg-white py-2 mb-md-3">
         
-        <!-- Sizes -->
+        <!-- Sizes -->                                                                                                                                                        
         <div class="col-6 col-md-12 order-md-2">
             <button type="button" class="d-flex justify-content-between align-items-center w-100 btn border" data-bs-toggle="collapse" data-bs-target="#collapseChooseSize" aria-expanded="false" aria-controls="collapseChooseSize">
                 <span class="fs-085-rem">Talla</span>
@@ -91,7 +103,7 @@
         </div>
         
         <!-- Color -->
-        <div class="col-6 col-md-12 order-md-1">
+        <div class="col-6 col-md-12 order-md-1 mb-md-2">
             <button type="button" class="d-flex d-md-none justify-content-between align-items-center w-100 btn border" data-bs-toggle="collapse" data-bs-target="#collapseChooseColor" aria-expanded="false" aria-controls="collapseChooseColor">
                 <section class="pill-color">
                     <img src="../static/img/blue.webp" class="rounded-circle" alt="" width="16" height="16">
@@ -107,7 +119,7 @@
                         <p class="text-uppercase fs-5 fw-light mb-0" id="">Selecciona Color</p>
                         <button id="btnCloseColor" type="button" class="btn-close opacity-75" aria-label="Close"></button>
                     </div>
-                    <div class="card-body vh-100 overflow-auto p-md-0">
+                    <div class="card-body vh-100 p-md-0">
                         {{> _ChooseColor }}
                     </div>
                 </div>
@@ -115,10 +127,22 @@
         </div>
 
         <!-- Add Button -->
-        <div class="col-12 order-md-3 mt-2 mt-md-3">
+        <div class="col-12 order-md-3 mt-2 mt-md-3 mb-md-4">
             <button type="button" class="d-flex justify-content-center align-items-center w-100 btn btn-dark">
                 <span class="fs-5 fw-normal text-uppercase">Añadir a la cesta</span>            
             </button>
+        </div>
+
+        <!-- Warnings & Sellers Reviews Down -->
+        <div class="col-12 fs-085-rem text-center d-none d-md-block order-md-4">
+            <div id="warningsPDP">
+                <p class="mb-0">¿Necesitas ayuda? <b>91 918 50 48</b></p>
+                <p class="mb-2">laborables de 9 a 21h - sábados de 9 a 14h</p>    
+            </div>
+            <div id="sellersReviews">
+                <a href="" class="d-block fw-bold text-decoration-none cPointer">Vendido por <span class="notranslate">Shoppins</span></a>
+                <small>Este artículo no admite descuentos adicionales</small>
+            </div>
         </div>
     </div>
 </div>

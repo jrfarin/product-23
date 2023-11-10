@@ -35,25 +35,43 @@
                 {{> partials/_Sugestions }}
             </article>
 
-            <!-- DESCRIPTION -->
-            <article id="descriptionPdp" class="row">
-                {{> partials/_Description }}
+            <!-- MORE FEATURES -->
+            <article id="moreFeatures" class="row">
+                <div class="col-12 col-lg-9">
+                    <!-- DESCRIPTION -->
+                    <section id="descriptionPdp" class="row">
+                        {{> partials/_Description }}
+                    </section>
+
+                    <!-- REVIEWS -->
+                    <section id="reviewsPdp" class="row">
+                        {{> partials/_Reviews }}
+                    </section>
+
+                    <!-- CARE INSTRUCTIONS -->
+                    <section id="careInstructionsPdp" class="row">
+                        {{> partials/_CareInstructions }}
+                    </section>
+
+                    <!-- SIZE REVIEWS  -->
+                    <section id="sizesReviewsPdp" class="row">
+                        {{> partials/_SizeReviews }}
+                    </section>
+
+                    <!-- DELIVERIES & DEVOLUTIONS  -->
+                    <section id="deliveriesAndDevolutions" class="row">
+                        {{> partials/_DeliveriesAndDevolutions }}
+                    </section>
+                </div>
+                <div class="col-lg-3 d-none d-lg-flex align-items-center">
+                    <picture>
+                        <source srcset='https://statics.venca.com/web/img/products/112004_262073_PV_DF_TL_20230214101733_2_xm.jpg'>
+                        <img src='https://statics.venca.com/web/img/products/112004_262073_PV_DF_TL_20230214101733_2_xm.webp' class='thumbnail img-fluid' />
+                    </picture> 
+                </div>
             </article>
 
-            <!-- REVIEWS -->
-            <article id="reviewsPdp" class="row">
-                {{> partials/_Reviews }}
-            </article>
-
-            <!-- CARE INSTRUCTIONS -->
-            <article id="careInstructionsPdp" class="row">
-                {{> partials/_CareInstructions }}
-            </article>
-
-            <!-- SIZE REVIEWS  -->
-            <article id="sizesReviewsPdp" class="row">
-                {{> partials/_SizeReviews }}
-            </article>
+            
    
         </section>
         
