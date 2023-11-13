@@ -137,6 +137,7 @@
             
         }
     }
+
     #lastSeen {
         .swiper-button-prev,
         .swiper-button-next {
@@ -171,7 +172,38 @@
         }
         &.careInstructions {
             -webkit-line-clamp: 1;
-            
+            span.vcp {
+                width: 36px;
+                height: 24px;
+                top: 6px;
+                &.vcp-5 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/handwash.svg") no-repeat;
+                }           
+                &.vcp-10 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/wash.svg") no-repeat;
+                }         
+                &.vcp-15 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/w40C.svg") no-repeat;
+                }        
+                &.vcp-45 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/no-bleach.svg") no-repeat;
+                }       
+                &.vcp-50 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/no-iron.svg") no-repeat;
+                }       
+                &.vcp-51 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/iron110.svg") no-repeat;
+                }
+                &.vcp-52 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/iron150.svg") no-repeat;
+                }
+                &.vcp-60 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/no-wash-dry.svg") no-repeat;
+                }
+                &.vcp-76 {
+                    background: url("https://venca.es/Content/Images/Icons/Product/Care/no-dry-machine.svg") no-repeat;
+                }             
+            }       
         }
         .box-bar {
             span {
@@ -230,23 +262,10 @@
     border-radius: 8px !important;
     border: 2px solid #fff !important
 }
-
 ::-webkit-scrollbar-track {
     border-radius: 8px !important;
     background-color: #fff !important
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* === ASPECT RATIO === */
 .aspect {
@@ -280,8 +299,7 @@
     cursor: pointer;
 }
 
-
-
+ 
 
 
 
