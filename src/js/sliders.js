@@ -24,7 +24,7 @@ export const swiperZoom = new Swiper(".swiperZoom", {
     },
 });
 
-export const swiperLastSeen = new Swiper('.swiperLastSeen', {
+export const swiperSuggestion = new Swiper('.swiperSuggestion', {
     slidesPerView: 2.5,
     spaceBetween: 15,
     modules: [Navigation],

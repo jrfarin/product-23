@@ -32,6 +32,19 @@
                 left: 17%;
             }
         }
+        #videoPdp {
+            div {
+                top: 2.5rem!important;
+                @include laptop {
+                    top: 3rem!important;
+                    right: 0.1rem!important;
+                }
+                button {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
     }
     
     #integerPricePart {
@@ -60,7 +73,22 @@
             }
         }
     }
-
+    .box-float {
+        @include tablet {
+            position: absolute;
+            bottom: -65px;
+        }
+        @include laptop {
+            bottom: -80px;
+        }
+    }
+    #botonesProd {
+        .chevronDown:not(.disabled) {
+            svg {
+                display:none;
+            }
+        }
+    }
     #collapseChooseSize {
         position: fixed;
         top: 0;
@@ -123,6 +151,7 @@
                     picture {
                         width: 36px;
                         height: 36px;
+                        display: inline-block;
                         img {  
                             &.active {  
                                 border: 3px solid $textColor;           
@@ -295,13 +324,27 @@
     max-height: 97vh;
 }
 
+#sellerPage {
+    .sellerImages, .sellerResume {
+        @include laptop {
+            border-bottom: 1px solid #dedede;
+        }
+        .img-fluid-seller {
+            @include laptop {
+                max-width: 90%;
+            }
+        }
+    }
+}
+
 .cPointer {
     cursor: pointer;
 }
-
- 
-
-
-
-
-
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.sending > svg {
+    position: relative;
+    animation:spin 2s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

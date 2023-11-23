@@ -14,14 +14,15 @@ import './static/img/sky.webp';
 import './static/img/white.webp';
 
 
-import { swiperProduct, swiperZoom } from './js/sliders';
-import { wishlistIcon, srcSliderActive, slideshowDk, closePanels, togglePanels } from './js/custom';
+import { swiperProduct, swiperZoom, swiperSuggestion } from './js/sliders';
+import { wishlistIcon, srcSliderActive, slideshowDk, closePanels, togglePanels, sellerPanels } from './js/custom';
 
 wishlistIcon();
 srcSliderActive();
 slideshowDk();
 closePanels();
 togglePanels();
+sellerPanels();
 
 
 

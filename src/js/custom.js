@@ -122,3 +122,17 @@ export const togglePanels = () => {
         }
     } 
 }
+
+// SELLER PANELS 
+export const sellerPanels = () => {
+    const sellerPanel = document.querySelectorAll(".sellerPanel");
+
+    sellerPanel.forEach((panel) => {
+        panel.addEventListener("click", rotateIcon);
+    });
+
+    function rotateIcon() {
+        const svg = (this.children[1]);
+        svg.classList.toggle('rotate-180')
+    }
+}
